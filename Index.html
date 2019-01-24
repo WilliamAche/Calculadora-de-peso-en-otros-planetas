@@ -12,31 +12,30 @@
     <meta name="author" content="William Ache, William28ache@gmail.com">
 	
 	<!-- ICON URL -->
-    <link rel="shortcut icon" href="Multimedia/Icon.png"  type="image/x-icon"  />
-	
-	<!-- CURSOR -->
-	<style type="text/css">* {cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur881.cur), auto !important;}</style><a href="http://www.cursors-4u.com/cursor/2011/12/10/silver-pointer-15.html" target="_blank" title="Silver Pointer"><img src="http://cur.cursors-4u.net/cursor.png" border="0" alt="Silver Pointer" style="position:absolute; top: 0px; right: 0px;" /></a>
+    <link id="icon" rel="shortcut icon" href="Multimedia/icon 2.png" type="image/x-icon"  />
 
 	<!-- ENLACES -->
 
-	<link rel="stylesheet" type="text/css" href="style.css">
-
-
-
-
-    <title>Calculadora</title>
-
+	<link rel="stylesheet" type="text/css" href="complement/style.css">
 	
-                                                                    
+	<link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+
+
+
+    <title>Calculadora Planetaria</title>
+
+	                                                           
 </head>
  
 
 
-<body> 
+<body id="fondo" background="Multimedia/fondoo.gif"> 
 
 	
 
-<h1>Tu peso en otros planetas del sistema solar</h1>
+<h1>Tu Peso En Otros Planetas Del Sistema Solar</h1>
+
+<br>
 
 <p>¿ Sabias que tu peso en la tierra no es el mismo en otros planetas ?</p>
 
@@ -61,7 +60,9 @@ var peso_del_usuario = prompt("¿ Cual es tu peso ?")
 
 var peso = parseInt(peso_del_usuario);
 
-var planeta = prompt("¿ En que planeta te quieres pesar ?\n 1-Mercurio\n 2-Venus\n 3-Tierra\n 4-Luna\n 5-Marte\n 6-Jupiter\n 7-Saturno\n 8-Urano\n 9-Neptuno")
+var planeta = prompt("¿ En que planeta te quieres pesar ?\n 0-Sol\n 1-Mercurio\n 2-Venus\n 3-Tierra\n 4-Luna\n 5-Marte\n 6-Jupiter\n 7-Saturno\n 8-Urano\n 9-Neptuno")
+
+var sol = 274.1;
 
 var mercurio = 3.7;
 
@@ -83,96 +84,102 @@ var neptuno = 11.15;
 
 var peso_final;
 
+var nombre
 
+var description
 
-if(planeta==1)
+if(planeta==0)
 {
+	peso_final = peso * sol / tierra;
 
+	peso_final = parseInt(peso_final);
+
+	nombre = ("sol");
+
+	description = ("esto es una prueba de mercurio")
+}
+
+else if(planeta==1)
+{
 	peso_final = peso * mercurio / tierra;
 
 	peso_final = parseInt(peso_final);
 
-document.write("Tu peso en <strong>Mercurio</strong> es " +  peso_final + " kilos"); 
+	nombre = ("mercurio");
+
+	description = ("esto es una prueba de mercurio")
 }
 
 else if(planeta==2)
 {
-
 	peso_final = peso * venus/ tierra;
 
 	peso_final = parseInt(peso_final);
 
-document.write("Tu peso en <strong>Venus</strong> es " +  peso_final + " kilos"); 
+	nombre = ("venus");
 }
 
 else if(planeta==3)
 {
-
 	peso_final = peso 
 
 	peso_final = parseInt(peso_final);
 
-document.write("Tu peso en la <strong>Tierra</strong> es " +  peso_final + " kilos"); 
+	nombre = ("tierra");
 }
 
 else if(planeta==4)
 {
-
 	peso_final = peso * luna / tierra;
 
 	peso_final = parseInt(peso_final);
 
-document.write("Tu peso en la <strong>Luna</strong> es " +  peso_final + " kilos"); 
+	nombre = ("luna"); 
 }
 
 else if(planeta==5)
 {
-
 	peso_final = peso * marte / tierra;
 
 	peso_final = parseInt(peso_final);
 
-document.write("Tu peso en <strong>Marte</strong> es " +  peso_final + " kilos"); 
+	nombre = ("marte");
 }
 
 else if(planeta==6)
 {
-
 	peso_final = peso * jupiter / tierra;
 
 	peso_final = parseInt(peso_final);
 
-document.write("Tu peso en <strong>Jupiter</strong> es " +  peso_final + " kilos"); 
+	nombre = ("jupiter"); 
 }
 
 else if(planeta==7)
 {
-
 	peso_final = peso * saturno / tierra;
 
 	peso_final = parseInt(peso_final);
 
-document.write("Tu peso en <strong>Saturno</strong> es " +  peso_final + " kilos"); 
+	nombre = ("Saturno"); 
 }
 
 else if(planeta==8)
 {
-
 	peso_final = peso * urano / tierra;
 
 	peso_final = parseInt(peso_final);
 
-document.write("Tu peso en <strong>Urano</strong> es " +  peso_final + " kilos"); 
+	nombre = ("Urano");
 }
 
 else if(planeta==9)
 {
-
 	peso_final = peso * neptuno / tierra;
 
 	peso_final = parseInt(peso_final);
 
-document.write("Tu peso en <strong>Neptuno</strong> es " +  peso_final + " kilos"); 
+	nombre = ("Neptuno");	 
 }
 
 else
@@ -180,15 +187,12 @@ else
    peso_final = document.write("Elige un valor Disponible");
 }
 
+document.write("<div id=resultado> Tu peso en <strong>" + nombre + "</strong> es " +  peso_final + " kilos </div>");
 
-
-
+document.write("<div id=description> " + description + "</div>")
 
 
 </script>
-
-
-
 </body>
 </html>
 
