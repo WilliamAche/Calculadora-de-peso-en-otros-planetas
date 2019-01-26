@@ -6,7 +6,6 @@
 
 #fondo
 {
-	
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat:repeat-x;
@@ -23,28 +22,44 @@ h1
 	text-align: center;
 	font-family: 'Acme', sans-serif;
 	font-size: 50px;
+	color:#FFFF00;
 
 }
 
-p
+P
 {
 	text-align: center;
+	color: #C0C0C0;
+	font-size: 19px;
+	position: relative;
+	font-family: 'Acme', sans-serif;
+	width: 90%;
+	left: 8%;	
+	
+	
 }
 
 #resultado
 {
 	text-align: center;
-	font-size: ;
+	font-size: 30px;
+	color:#ff0000;
+	bottom: 50%;
+	position: relative;
 }
 
 #description
 {
+	
 	text-align: center;
+	font-size: 20px;
+	position: fixed;
+	bottom: 20px;
+	padding: 90px;
+	color: #C0C0C0
+
+
+
 }
 
-#icon
-{
-	width: 500px;
-	height: 500px;
-}
 
