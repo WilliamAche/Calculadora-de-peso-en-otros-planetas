@@ -30,7 +30,7 @@ P
 {
 	text-align: center;
 	color: #C0C0C0;
-	font-size: 19px;
+	font-size: 20px;
 	position: relative;
 	font-family: 'Acme', sans-serif;
 	width: 90%;
@@ -46,6 +46,7 @@ P
 	color:#ff0000;
 	bottom: 50%;
 	position: relative;
+	font-family: 'Acme', sans-serif;
 }
 
 #description
@@ -56,7 +57,8 @@ P
 	position: fixed;
 	bottom: 20px;
 	padding: 90px;
-	color: #C0C0C0
+	color: #C0C0C0;
+	font-family: 'Acme', sans-serif;
 
 
 

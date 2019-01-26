@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en, es">
 <head>
-    
      
 	<!-- META DATOS -->
     <meta charset="UTF-8">
@@ -21,38 +20,17 @@
 	<link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
 
 
-
-    <title>Calculadora Planetaria</title>
-
+								<title>Calculadora Planetaria</title>
 	                                                           
 </head>
  
-
-
 <body id="fondo" background="Multimedia/fondoo.gif"> 
-
-	
 
 <h1>Tu Peso En Otros Planetas Del Sistema Solar</h1>
 
 <br>
 
 <p>Si eres un glotón que por más que lo intentes no consigues ponerte a dieta, aprendiz de astronauta o simplemente una persona curiosa, esto te interesa. ¿Sabías que si viajas a otro planeta tu peso variará? ¿Que tal eso?. Así que si quieres sentirte más ligero pero no tienes fuerza de voluntad para comer menos, emigrar a otro mundo podría ser una solución. Pero ten cuidado no te vayas a equivocar de planeta, porque dependiendo a dónde vayas, también podrías ganar unos cuantos kilos. </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <script type="text/javascript"> 
 
@@ -70,9 +48,9 @@ var venus = 8.87;
 
 var tierra = 9.8;
 
-var luna = 1.62;
+var luna = 1.70;
 
-var marte = 3.7;
+var marte = 3.8;
 
 var jupiter = 24.8;
 
@@ -88,15 +66,19 @@ var nombre
 
 var description
 
+var tipos
+
 if(planeta==0)
 {
 	peso_final = peso * sol / tierra;
 
 	peso_final = parseInt(peso_final);
 
-	nombre = ("sol");
+	nombre = ("El Sol");
 
-	description = ("Aunque sería imposible habitar en un mundo como lo es el SOL se puede calcular tu peso si pudieras estar ahí con un super traje alienígena mutante para no quedar quemado/a o pulverizado/a, La gravedad del sol es tan pesada que lo más probable serias aplastado/a por tu mismo peso ya que serias casi 28 veces más pesado/a que en la tierra ¿Te imaginas?, aparte de quedar bien tostadito/a por la gran cantidad de energía que irradia el SOL, quedarás bien aplastadito/a")
+	tipos = ("kilos")
+
+	description = ("Aunque sería imposible habitar en un mundo como lo es el SOL se puede calcular tu peso si pudieras estar ahí con un super traje alienígena mutante para no quedar quemado/a o pulverizado/a, La gravedad del sol es tan pesada que lo más probable serias aplastado/a por tu mismo peso ya que serias casi Veintiocho veces más pesado/a que en la tierra ¿Te imaginas?, aparte de quedar bien tostadito/a por la gran cantidad de energía que irradia el SOL, quedarás bien aplastadito/a.")
 }
 
 else if(planeta==1)
@@ -105,9 +87,11 @@ else if(planeta==1)
 
 	peso_final = parseInt(peso_final);
 
-	nombre = ("mercurio");
+	nombre = ("Mercurio");
 
-	description = ("esto es una prueba de mercurio")
+	tipos = ("kilos")	
+
+	description = ("Tu peso en MERCURIO sería más de la mitad de tu peso en la TIERRA, aunque no saldrás volando, Te sentirás ligero como un bebé.")
 }
 
 else if(planeta==2)
@@ -116,7 +100,11 @@ else if(planeta==2)
 
 	peso_final = parseInt(peso_final);
 
-	nombre = ("venus");
+	nombre = ("Venus");
+
+	tipos = ("kilos")	
+
+	description = ("!!!IMPRESIONANTE!!!, En VENUS solo pesaras entre cinco ó siete Kilos menos que en la tierra, Que eso se logra con un mes de ejercicio asi que...¿Que esperas para hacerlo?.")
 }
 
 else if(planeta==3)
@@ -125,7 +113,11 @@ else if(planeta==3)
 
 	peso_final = parseInt(peso_final);
 
-	nombre = ("tierra");
+	nombre = ("La Tierra");
+
+	tipos = ("kilos")	
+
+	description = ("¿Enserio calculaste tu peso en la tierra?... Si tu peso actual lo sabes por que estas en la tierra... y si tu peso es de "+ peso_final + " Kilos ¿cuanto crees que sera tu peso en el planeta tierra...?")
 }
 
 else if(planeta==4)
@@ -134,7 +126,11 @@ else if(planeta==4)
 
 	peso_final = parseInt(peso_final);
 
-	nombre = ("luna"); 
+	nombre = ("La Luna"); 
+
+	tipos = ("kilos")	
+
+	description = ("Tu peso en la LUNA sería 6 veces menor que en la tierra por lo que probablemente no saldrías volando pero si saltarias el doble o más que en la tierra.")
 }
 
 else if(planeta==5)
@@ -143,7 +139,11 @@ else if(planeta==5)
 
 	peso_final = parseInt(peso_final);
 
-	nombre = ("marte");
+	nombre = ("Marte");
+
+	tipos = ("kilos")	
+
+	description = ("Tu peso en MARTE sería casi cuatro veces menor que en la tierra y dos veces menos que en la LUNA, aunque te sientas algo liviano no pienses que saldrás volando, pesaras como un niño de siete años.")
 }
 
 else if(planeta==6)
@@ -152,7 +152,11 @@ else if(planeta==6)
 
 	peso_final = parseInt(peso_final);
 
-	nombre = ("jupiter"); 
+	nombre = ("Júpiter"); 
+
+	tipos = ("kilos")	
+
+	description = ("Tu peso en JÚPITER seria casi el triple que en la TIERRA y aunque estes ahi con un traje espacial te sera muy dificil moverte ya que te sentirás como tu tio el cervecero.")
 }
 
 else if(planeta==7)
@@ -162,6 +166,10 @@ else if(planeta==7)
 	peso_final = parseInt(peso_final);
 
 	nombre = ("Saturno"); 
+
+	tipos = ("kilos")	
+
+	description = ("Tu peso en SATURNO seria un seis porciento mas que en la tierra asi que solo subirias seis kilitos mas del actual asi que todo bien.")
 }
 
 else if(planeta==8)
@@ -171,6 +179,10 @@ else if(planeta==8)
 	peso_final = parseInt(peso_final);
 
 	nombre = ("Urano");
+
+	tipos = ("kilos")	
+
+	description = ("Tu peso en URANO seria casi un quince porciento menos que en la tierra asi que perderias los kilitos que has tratado de perder estos ultimos cinco años.")
 }
 
 else if(planeta==9)
@@ -179,18 +191,29 @@ else if(planeta==9)
 
 	peso_final = parseInt(peso_final);
 
-	nombre = ("Neptuno");	 
+	nombre = ("Neptuno");
+
+	tipos = ("kilos")	 
+
+	description = ("Tu peso en NEPTUNO seria casi el doble que en SATURNO, solo pesaras un trece porciento mas que en la TIERRA asi que todo bien. ")
 }
 
 else
 {
-   peso_final = document.write("Elige un valor Disponible");
+   peso_final = document.write("<div id=resultado>Ja..Ja..Ja.. ¿Muy gracioso/a no?, aqui el gracioso soy yo! así que selecciona bien el valor.</div>");
+
+   nombre = ("Tu Cerebro")
+
+   peso_final = ("0.00001")
+
+   tipos = ("kg")
+
+   description = ("Puedes que pulsaste una letra o algun valor incorrecto o tambien puede que seas impaciente y no vez lo que escribes...")	
 }
 
-document.write("<div id=resultado> Tu peso en <strong>" + nombre + "</strong> es " +  peso_final + " kilos </div>");
+document.write("<div id=resultado> Tu peso en <strong>" + nombre + "</strong> es de " +  peso_final +tipos + " </div>");
 
 document.write("<div id=description> " + description + "</div>")
-
 
 </script>
 </body>
